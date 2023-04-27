@@ -31,3 +31,9 @@ VALUES
     ('00108941', 'Active', 'Person', 'Four', 'person.four@gfk.com', 'Hong Kong'),
     ('00108901', 'Active', 'Person', 'Two', 'person.two@gfk.com', 'France'),
     ('00199990', 'Inactive', 'Person', 'Three', 'person.three@gfk.com', 'Brazil');
+
+UPDATE `my_db_sort`.`votes` SET `quality` = 'entrepreneur' WHERE (`ID` = '253');
+UPDATE `my_db_sort`.`votes` SET `quality` = 'entrepreneur' WHERE (`ID` = '254');
+UPDATE `my_db_sort`.`votes` SET `quality` = 'partner' WHERE (`ID` = '255');
+UPDATE `my_db_sort`.`votes` SET `quality` = 'developer' WHERE (`ID` = '256');
+UPDATE `my_db_sort`.`votes` SET `quality` = 'developer' WHERE (`ID` = '257');
