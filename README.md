@@ -33,3 +33,41 @@ VALUES
     ('00108941', 'Active', 'person.two', 'Person', 'Four', 'person.four@gfk.com', 'Hong Kong'),
     ('00108901', 'Active', 'person.three', 'Person', 'Two', 'person.two@gfk.com', 'France'),
     ('00199990', 'Inactive', 'person.four', 'Person', 'Three', 'person.three@gfk.com', 'Brazil');
+
+SELECT 
+    p.Last_Name, 
+    p.Locatie, 
+    DATE_FORMAT(v.voting_date, '%Y-%m') AS month,
+    CONCAT('Q', QUARTER(v.voting_date)) AS quarter,
+    COUNT(CASE WHEN v.valid = true THEN v.quality END) AS total_valid_votes
+FROM persons p
+LEFT JOIN votes v ON p.ID = v.chosen_person
+WHERE v.voting_date >= DATE_SUB(NOW(), INTERVAL 1 YEAR)
+GROUP BY 
+    p.Last_Name, 
+    p.Locatie, 
+    DATE_FORMAT(v.voting_date, '%Y-%m'),
+    CONCAT('Q', QUARTER(v.voting_date))
+ORDER BY 
+    p.Last_Name, 
+    p.Locatie, 
+    DATE_FORMAT(v.voting_date, '%Y-%m');
+
+SELECT 
+    p.Last_Name, 
+    p.Locatie, 
+    DATE_FORMAT(v.voting_date, '%Y-%m') AS month,
+    CONCAT('Q', QUARTER(v.voting_date)) AS quarter,
+    COUNT(CASE WHEN v.valid = true THEN v.quality END) AS total_valid_votes
+FROM persons p
+LEFT JOIN votes v ON p.ID = v.chosen_person
+WHERE v.voting_date >= DATE_SUB(NOW(), INTERVAL 1 YEAR)
+GROUP BY 
+    p.Last_Name, 
+    p.Locatie, 
+    DATE_FORMAT(v.voting_date, '%Y-%m'),
+    CONCAT('Q', QUARTER(v.voting_date))
+ORDER BY 
+    p.Last_Name, 
+    p.Locatie, 
+    DATE_FORMAT(v.voting_date, '%Y-%m');
