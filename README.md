@@ -1,23 +1,22 @@
 CREATE TABLE votes (
-	ID INT PRIMARY KEY, 
+    ID INT(11) PRIMARY KEY, 
     voting_date DATETIME, 
     chosen_person VARCHAR(20), 
-    voter INT, 
+    voter VARCHAR(50), 
     message VARCHAR(255), 
     valid BOOLEAN, 
     quality VARCHAR(50)
     );
 
 CREATE TABLE persons (
-    ID VARCHAR(20) PRIMARY KEY,
+    ID INT(11) NOT NULL PRIMARY KEY,
     Status VARCHAR(20),
     Short_Name VARCHAR(50),
     First_Name VARCHAR(50),
     Last_Name VARCHAR(50),
     Email_Address VARCHAR(100),
     Locatie VARCHAR(50)
-);
-
+    );
 
 INSERT INTO votes (ID, voting_date, chosen_person, voter, message, valid, quality)
 VALUES
@@ -29,45 +28,7 @@ VALUES
 
 INSERT INTO persons (ID, Status, Short_Name, First_Name, Last_Name, Email_Address, Locatie)
 VALUES
-    ('00108901', 'Active', 'person.one', 'Person', 'One', 'person.one@gfk.com', 'Germany'),
-    ('00108941', 'Active', 'person.two', 'Person', 'Four', 'person.four@gfk.com', 'Hong Kong'),
-    ('00108901', 'Active', 'person.three', 'Person', 'Two', 'person.two@gfk.com', 'France'),
-    ('00199990', 'Inactive', 'person.four', 'Person', 'Three', 'person.three@gfk.com', 'Brazil');
-
-SELECT 
-    p.Last_Name, 
-    p.Locatie, 
-    DATE_FORMAT(v.voting_date, '%Y-%m') AS month,
-    CONCAT('Q', QUARTER(v.voting_date)) AS quarter,
-    COUNT(CASE WHEN v.valid = true THEN v.quality END) AS total_valid_votes
-FROM persons p
-LEFT JOIN votes v ON p.ID = v.chosen_person
-WHERE v.voting_date >= DATE_SUB(NOW(), INTERVAL 1 YEAR)
-GROUP BY 
-    p.Last_Name, 
-    p.Locatie, 
-    DATE_FORMAT(v.voting_date, '%Y-%m'),
-    CONCAT('Q', QUARTER(v.voting_date))
-ORDER BY 
-    p.Last_Name, 
-    p.Locatie, 
-    DATE_FORMAT(v.voting_date, '%Y-%m');
-
-SELECT 
-    p.Last_Name, 
-    p.Locatie, 
-    DATE_FORMAT(v.voting_date, '%Y-%m') AS month,
-    CONCAT('Q', QUARTER(v.voting_date)) AS quarter,
-    COUNT(CASE WHEN v.valid = true THEN v.quality END) AS total_valid_votes
-FROM persons p
-LEFT JOIN votes v ON p.ID = v.chosen_person
-WHERE v.voting_date >= DATE_SUB(NOW(), INTERVAL 1 YEAR)
-GROUP BY 
-    p.Last_Name, 
-    p.Locatie, 
-    DATE_FORMAT(v.voting_date, '%Y-%m'),
-    CONCAT('Q', QUARTER(v.voting_date))
-ORDER BY 
-    p.Last_Name, 
-    p.Locatie, 
-    DATE_FORMAT(v.voting_date, '%Y-%m');
+    (00108901, 'Active', 'person.one', 'Person', 'One', 'person.one@gfk.com', 'Germany'),
+    (00108941, 'Active', 'person.two', 'Person', 'Two', 'person.two@gfk.com', 'France'),
+    (00199990, 'Inactive', 'person.three', 'Person', 'Three', 'person.three@gfk.com', 'Brazil'),
+    (01100003, 'Active', 'person.four', 'Person', 'Four', 'person.four@gfk.com', 'Hong Kong');
