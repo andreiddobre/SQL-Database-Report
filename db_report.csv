@@ -1,0 +1,10 @@
+quality,number,locatie,period,name
+entrepreneur,1,Germany,October,"Person One"
+entrepreneur,1,Germany,Q4,"Person One"
+entrepreneur,1,Germany,2022,"Person One"
+partner,1,Brazil,October,"Person Three"
+partner,1,Brazil,Q4,"Person Three"
+partner,1,Brazil,2022,"Person Three"
+developer,2,France,October,"Person Two"
+developer,2,France,Q4,"Person Two"
+developer,2,France,2022,"Person Two"
