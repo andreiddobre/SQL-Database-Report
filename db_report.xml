@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?mso-application progid="Excel.Sheet"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:x="urn:schemas-microsoft-com:office:excel"
+xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+xmlns:html="http://www.w3.org/TR/REC-html40">
+<Worksheet ss:Name="Table1">
+	<Table>
+		<Column ss:Index="1" ss:AutoFitWidth="0" ss:Width="110"/>
+		<Column ss:Index="2" ss:AutoFitWidth="0" ss:Width="110"/>
+		<Column ss:Index="3" ss:AutoFitWidth="0" ss:Width="110"/>
+		<Column ss:Index="4" ss:AutoFitWidth="0" ss:Width="110"/>
+		<Column ss:Index="5" ss:AutoFitWidth="0" ss:Width="110"/>
+		<Row>
+			<Cell><Data ss:Type="String">quality</Data></Cell>
+			<Cell><Data ss:Type="String">number</Data></Cell>
+			<Cell><Data ss:Type="String">locatie</Data></Cell>
+			<Cell><Data ss:Type="String">period</Data></Cell>
+			<Cell><Data ss:Type="String">name</Data></Cell>
+		</Row>
+
+		<Row>
+			<Cell><Data ss:Type="String">entrepreneur</Data></Cell>
+			<Cell><Data ss:Type="String">1</Data></Cell>
+			<Cell><Data ss:Type="String">Germany</Data></Cell>
+			<Cell><Data ss:Type="String">October</Data></Cell>
+			<Cell><Data ss:Type="String">Person One</Data></Cell>
+		</Row>
+		<Row>
+			<Cell><Data ss:Type="String">entrepreneur</Data></Cell>
+			<Cell><Data ss:Type="String">1</Data></Cell>
+			<Cell><Data ss:Type="String">Germany</Data></Cell>
+			<Cell><Data ss:Type="String">Q4</Data></Cell>
+			<Cell><Data ss:Type="String">Person One</Data></Cell>
+		</Row>
+		<Row>
+			<Cell><Data ss:Type="String">entrepreneur</Data></Cell>
+			<Cell><Data ss:Type="String">1</Data></Cell>
+			<Cell><Data ss:Type="String">Germany</Data></Cell>
+			<Cell><Data ss:Type="String">2022</Data></Cell>
+			<Cell><Data ss:Type="String">Person One</Data></Cell>
+		</Row>
+		<Row>
+			<Cell><Data ss:Type="String">partner</Data></Cell>
+			<Cell><Data ss:Type="String">1</Data></Cell>
+			<Cell><Data ss:Type="String">Brazil</Data></Cell>
+			<Cell><Data ss:Type="String">October</Data></Cell>
+			<Cell><Data ss:Type="String">Person Three</Data></Cell>
+		</Row>
+		<Row>
+			<Cell><Data ss:Type="String">partner</Data></Cell>
+			<Cell><Data ss:Type="String">1</Data></Cell>
+			<Cell><Data ss:Type="String">Brazil</Data></Cell>
+			<Cell><Data ss:Type="String">Q4</Data></Cell>
+			<Cell><Data ss:Type="String">Person Three</Data></Cell>
+		</Row>
+		<Row>
+			<Cell><Data ss:Type="String">partner</Data></Cell>
+			<Cell><Data ss:Type="String">1</Data></Cell>
+			<Cell><Data ss:Type="String">Brazil</Data></Cell>
+			<Cell><Data ss:Type="String">2022</Data></Cell>
+			<Cell><Data ss:Type="String">Person Three</Data></Cell>
+		</Row>
+		<Row>
+			<Cell><Data ss:Type="String">developer</Data></Cell>
+			<Cell><Data ss:Type="String">2</Data></Cell>
+			<Cell><Data ss:Type="String">France</Data></Cell>
+			<Cell><Data ss:Type="String">October</Data></Cell>
+			<Cell><Data ss:Type="String">Person Two</Data></Cell>
+		</Row>
+		<Row>
+			<Cell><Data ss:Type="String">developer</Data></Cell>
+			<Cell><Data ss:Type="String">2</Data></Cell>
+			<Cell><Data ss:Type="String">France</Data></Cell>
+			<Cell><Data ss:Type="String">Q4</Data></Cell>
+			<Cell><Data ss:Type="String">Person Two</Data></Cell>
+		</Row>
+		<Row>
+			<Cell><Data ss:Type="String">developer</Data></Cell>
+			<Cell><Data ss:Type="String">2</Data></Cell>
+			<Cell><Data ss:Type="String">France</Data></Cell>
+			<Cell><Data ss:Type="String">2022</Data></Cell>
+			<Cell><Data ss:Type="String">Person Two</Data></Cell>
+		</Row>	</Table>
+</Worksheet>
+</Workbook>
